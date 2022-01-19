@@ -47,6 +47,9 @@
         } else if (elements.menu.className.indexOf('active') !== -1) {
             toggleAll();
         }
+        console.log(e.target.id);
+        Link = document.getElementById(e.target.id).className;
+        console.log(Link);
     }
     
     document.addEventListener('click', handleEvent);
