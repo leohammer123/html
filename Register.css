@@ -35,12 +35,17 @@
 }
 
 @media (max-width: 1199px) {
+  .u-section-1 .u-image-1 {
+    width: 485px;
+  }
+
   .u-section-1 .u-text-1 {
     margin-left: calc(((100% - 940px) / 2) + -25px);
   }
 
   .u-section-1 .u-form-1 {
     margin-left: calc(((100% - 940px) / 2) + -25px);
+    width: 495px;
   }
 
   .u-section-1 .u-text-2 {
@@ -81,7 +86,6 @@
 
   .u-section-1 .u-form-1 {
     margin-left: calc(((100% - 540px) / 2) + -25px);
-    width: 540px;
   }
 
   .u-section-1 .u-text-2 {
