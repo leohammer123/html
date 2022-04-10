@@ -3794,6 +3794,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           Email : email,
           EMAIL : email
         };
+        console.log(data)
         if (branchName) {
           data.Name = branchName;
           data.FNAME = branchName;
