@@ -1,10 +1,9 @@
 <?php
         use PHPMailer\PHPMailer\PHPMailer;
         use PHPMailer\PHPMailer\SMTP;
+		require '/opt/bitnami/projects/ctf/vendor/autoload.php';
 
 function sendmail($name,$password,$email){
-
-	require '/opt/bitnami/projects/ctf/vendor/autoload.php';
 
 	$mail = new PHPMailer();
 
