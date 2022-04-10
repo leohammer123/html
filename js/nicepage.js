@@ -3812,12 +3812,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         index = value.substring(index, value.indexOf("&", index));
         /** @type {string} */
         data["b_" + i + "_" + index] = "";
-        console.log(index)
+
         $.ajax({
           url : value,
           data : data,
           dataType : "jsonp"
         }).done(function(data) {
+            console.log(data)
           var o;
           if ("success" === data.result || /already/.test(data.msg)) {
             reset(node);
