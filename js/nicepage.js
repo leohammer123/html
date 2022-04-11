@@ -3820,6 +3820,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           dataType : "jsonp"
         }).done(function(data) {
           var o;
+          o = data;
           if ("success" === data.result || /already/.test(data.msg)) {
             reset(node);
             start(node);
