@@ -3870,7 +3870,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       }
       return {
         submit : function(event) {
-          alert(1);
           event.preventDefault();
           event.stopPropagation();
           var key = $(this).attr("action");
@@ -3890,6 +3889,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
             data : $(this).serialize(),
             dataType : "json"
           }).done(function(options) {
+            console.log(options);
             if (options && (options.success || options.ok)) {
               if (reset(name), value) {
                 window.location.replace(value);
