@@ -3788,7 +3788,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
        * @return {undefined}
        */
       function callback(node, value) {
-        alert(1);
         var branchName = node.find("input[name=name]").val();
         var email = node.find("input[name=email]").val();
         var data = {
@@ -3871,6 +3870,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       }
       return {
         submit : function(event) {
+          alert(1);
           event.preventDefault();
           event.stopPropagation();
           var key = $(this).attr("action");
