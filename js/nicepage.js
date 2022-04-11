@@ -3788,6 +3788,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
        * @return {undefined}
        */
       function callback(node, value) {
+        alert(1);
         var branchName = node.find("input[name=name]").val();
         var email = node.find("input[name=email]").val();
         var data = {
@@ -3819,7 +3820,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           data : data,
           dataType : "jsonp"
         }).done(function(data) {
-          alert(data);
           var o;
           if ("success" === data.result || /already/.test(data.msg)) {
             reset(node);
