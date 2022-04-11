@@ -3890,7 +3890,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
             data : $(this).serialize(),
             dataType : "json"
           }).done(function(options) {
-            console.log(options);
             if (options && (options.success || options.ok)) {
               if (reset(name), value) {
                 window.location.replace(value);
