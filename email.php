@@ -25,7 +25,7 @@
 		$mail->Subject = 'Thank you for regist cmsctf';
 		$mail->AltBody = 'This is a plain-text message body';
 		$mail->isHTML(true);
-		$link = hash('sha256',$password.$$_ENV["db_salt"].$name);
+		$link = hash('sha256',$password.$_ENV["db_salt"].$name);
 		$mail->Body = 'Hello '.$name.'! This is your validation <a href="'.'https://cmsctf.com/validate.php?check='.$link.'">link</a>.';
 		if (!$mail->send()) {
 	    	return  json_encode(array('success'=>false, 'error'=>'Mailer Error: ' . $mail->ErrorInfo));
