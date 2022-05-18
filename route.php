@@ -8,7 +8,7 @@
 
     // $cate = real_escape_string($_GET["c"]);
     $cate = "web";
-    $query = "SELECT * FROM `info` WHERE 'type' = '$s'";
+    $query = "SELECT * FROM `info` WHERE 'type' = '%s'";
     sprintf($query,$cate);
     
     $res = $conn->query($query) or die($conn->error);
@@ -17,7 +17,7 @@
     $cell = file_get_contents("./template/part.html",true);
     $end = file_get_contents("./template/bottom.html",true);
 
-    sprintf($start,$cate,$cate);
+    $start = sprintf($start,$cate,$cate);
     echo $start;
 
 
@@ -27,14 +27,15 @@
         $description = $row['description'];
         $difficulty = $row['difficulty'];
         $points = $row['points'];
-        $file = $row['file']
+        $file = $row['file'];
         // $cell = sprintf($cell,$name) 
-        $start = $start.$cell
+        $start = $start.$cell;
 
     }
     
-    $html .= $end;
-    echo $html;
+    //$html .= $end;
+    //
+    //echo $html;
     // Return back
 
 ?>
