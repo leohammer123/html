@@ -1,14 +1,9 @@
 <?php
 
 include 'email.php';
-use Dotenv\Dotenv;
-
-require __DIR__ . './../vendor/autoload.php';
-
-$dotenv = new Dotenv(__DIR__ . "/..");
+require 'vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createMutable(__DIR__, '.env');
 $dotenv->load();
-Dotenv::load(__DIR__);
-
 
 // Create connection
 

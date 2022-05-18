@@ -1,7 +1,8 @@
 <?php
 
-
-	Dotenv::load(__DIR__);
+	require 'vendor/autoload.php';
+	$dotenv = Dotenv\Dotenv::createMutable(__DIR__, '.env');
+	$dotenv->load();
 	$conn = new mysqli($_ENV["db_host"], $_ENV["db_user"], $_ENV["db_passwd"],$_ENV["db_db"]);
 
 	$val = $_GET["check"];
