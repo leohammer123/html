@@ -2,15 +2,12 @@
 
 include 'email.php';
 
-$password = "g52hS9C8C6aT";
-$db = "challenge";
+Dotenv::load(__DIR__);
+
+
 // Create connection
-$host = 'localhost';
-$user = 'root';
 
-$conn = new mysqli($host, $user, $password,$db);
-
-
+$conn = new mysqli($_ENV["db_host"], $_ENV["db_user"], $_ENV["db_passwd"],$_ENV["db_db"]);
 
 
 if(isset($_POST["name"]) && isset($_POST["email"])){
@@ -27,7 +24,6 @@ if(isset($_POST["name"]) && isset($_POST["email"])){
 
 	else{
 
-		$salt = "secret_salt987";
 		$result = sendmail($_POST["name"],$_POST["password"],$_POST["email"]);
 		echo $result;
 	
@@ -39,7 +35,7 @@ if(isset($_POST["name"]) && isset($_POST["email"])){
 		}
 
 		$query = "INSERT INTO `validate` (`validate`, `id`, `gmail`, `username`, `password`) VALUES (0, %d, '%s', '%s', '%s');";
-		$query = sprintf($query,$id,$clear_email,$clear_name,hash('sha256',$_POST["password"].$salt.$_POST["name"]));
+		$query = sprintf($query,$id,$clear_email,$clear_name,hash('sha256',$_POST["password"].$_ENV["db_salt"].$_POST["name"]));
 		$conn->query($query);
 
 
