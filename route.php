@@ -6,8 +6,8 @@
 
     $conn = new mysqli($_ENV["db_host"], $_ENV["db_user"], $_ENV["db_passwd"],$_ENV["db_db"]);
 
-    $cate = real_escape_string($_GET["c"]);
- 
+    // $cate = real_escape_string($_GET["c"]);
+    $cate = "web";
     $query = "SELECT * FROM `info` WHERE 'type' = '$s'";
     sprintf($query,$cate);
     
@@ -17,7 +17,8 @@
     $cell = file_get_contents("./template/part.html",true);
     $end = file_get_contents("./template/bottom.html",true);
 
-    sprintf($start,$cate);
+    sprintf($start,$cate,$cate);
+    echo $start;
 
 
 
