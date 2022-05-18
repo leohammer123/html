@@ -1,9 +1,11 @@
 <?php
 
 	use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-	require '/opt/bitnami/projects/ctf/vendor/autoload.php';
-	Dotenv::load(__DIR__);
+	use PHPMailer\PHPMailer\SMTP;
+	require 'vendor/autoload.php';
+	$dotenv = Dotenv\Dotenv::createMutable(__DIR__, '.env');
+	$dotenv->load();
+
 
 	function sendmail($name,$password,$email){
 
