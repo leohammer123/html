@@ -11,6 +11,12 @@ def isprime(k):
 
 i = True
 
+def sum(n):
+    s = 0
+    for i in str(n):
+        s += int(i)
+    return s
+    
 while(i):
     try:
         k = int(input())
@@ -19,10 +25,11 @@ while(i):
         continue
     
     if (isprime(k)):
-        if(int(math.log(k))>=4):
-            if(k%10==1):
-                if(hashlib.md5(str(k).encode()).hexdigest()=="0b43a4a4f569aaee9e3e094c770fb9b1"):
-                    print("Correct pincode")
-                    exit(0)
+        if(len(str(k))==5):
+            if(isprime(k+18) and isprime(k+36) and isprime(k+72)):
+                if(sum(k)==17):
+                    if((k+1)%37==0):
+                        print("Correct pincode")
+                        exit(0)
     
     print("Not correct")

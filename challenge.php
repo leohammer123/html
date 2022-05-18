@@ -8,8 +8,16 @@
                         case "web";
                                 $file = file_get_contents("/opt/bitnami/projects/ctf/category/web.html",true);
                                 echo $file;
-                                break;
-                        default;
+				break;
+			case "python";
+				$file = file_get_contents("/opt/bitnami/projects/ctf/category/python.html",true);
+				echo $file;
+				break;
+			case "analyze";
+				$file = file_get_contents("/opt/bitnami/projects/ctf/category/analyze.html",true);
+				echo $file;
+				break;
+			default;
                                 $file = file_get_contents("/opt/bitnami/projects/ctf/category/404.html",true);
                                 echo $file;
                                 break;

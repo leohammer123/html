@@ -15,18 +15,19 @@ function sendmail($name,$password,$email){
 	$mail->SMTPAuth = true;
 	$mail->Username = 'leo950413666@gmail.com';
 	$mail->Password = 'qccufobjwdyaxfqh';
-
+	$salt = "secret_salt987";
 	$mail->setFrom('from@example.com', 'noreply@cmsctf.com');
 	$mail->addReplyTo('replyto@example.com', 'noreply@cmsctf.com');
-	$mail->addAddress('j070431@my.cmsh.cyc.edu.tw', 'John Doe');
-	$mail->Subject = 'PHPMailer GMail SMTP test';
+	$mail->addAddress($email, 'John Doe');
+	$mail->Subject = 'Thank you for regist cmsctf';
 	$mail->AltBody = 'This is a plain-text message body';
-	$mail->Body = 'This is your validation link <a href="'.'>.';
-
+	$mail->isHTML(true);
+	$link = hash('sha256',$password.$salt.$name);
+	$mail->Body = 'Hello '.$name.'! This is your validation <a href="'.'https://cmsctf.com/validate.php?check='.$link.'">link</a>.';
 	if (!$mail->send()) {
-	    return  'Mailer Error: ' . $mail->ErrorInfo;
+	    return  json_encode(array('success'=>false, 'error'=>'Mailer Error: ' . $mail->ErrorInfo));
 	} else {
-	    return  'Message sent!';
+	    return  json_encode(array('success'=>true));
 	}
 }
 ?>

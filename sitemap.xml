@@ -8,34 +8,59 @@
 
 
 <url>
-  <loc>http://cmsctf.com/</loc>
-  <lastmod>2022-04-07T11:16:41+00:00</lastmod>
+  <loc>https://cmsctf.com/</loc>
+  <lastmod>2022-04-07T16:08:02+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://cmsctf.com/index.html</loc>
-  <lastmod>2022-04-07T11:16:41+00:00</lastmod>
+  <loc>https://cmsctf.com/index.html</loc>
+  <lastmod>2022-04-07T16:08:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cmsctf.com/challenge.php</loc>
-  <lastmod>2022-04-07T14:38:08+00:00</lastmod>
+  <loc>https://cmsctf.com/challenge.php</loc>
+  <lastmod>2022-04-18T15:15:39+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cmsctf.com/about.html</loc>
-  <lastmod>2022-04-06T11:29:14+00:00</lastmod>
+  <loc>https://cmsctf.com/about.html</loc>
+  <lastmod>2022-04-07T16:08:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cmsctf.com/login.html</loc>
-  <lastmod>2022-04-06T11:29:14+00:00</lastmod>
+  <loc>https://cmsctf.com/login.html</loc>
+  <lastmod>2022-04-07T16:08:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cmsctf.com/register.html</loc>
-  <lastmod>2022-04-06T11:29:14+00:00</lastmod>
+  <loc>https://cmsctf.com/register.html</loc>
+  <lastmod>2022-04-18T11:53:50+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cmsctf.com/challenge.php?c=python</loc>
+  <lastmod>2022-04-18T15:15:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cmsctf.com/challenge.php?c=analyze</loc>
+  <lastmod>2022-04-18T15:15:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cmsctf.com/challenge.php?c=web</loc>
+  <lastmod>2022-04-18T15:15:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cmsctf.com/challenge.php?c=pwn</loc>
+  <lastmod>2022-04-18T15:15:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cmsctf.com/file/python/clue.txt</loc>
+  <lastmod>2022-04-18T09:33:38+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 
 
