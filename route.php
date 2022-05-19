@@ -6,10 +6,9 @@
 
     $conn = new mysqli($_ENV["db_host"], $_ENV["db_user"], $_ENV["db_passwd"],$_ENV["db_db"]);
 
-    // $cate = real_escape_string($_GET["c"]);
-    $cate = "web";
+    $cate = real_escape_string($_GET["c"]);
     $query = "SELECT * FROM `info` WHERE 'type' = '%s'";
-    sprintf($query,$cate);
+    $query = sprintf($query,$cate);
     
     $res = $conn->query($query) or die($conn->error);
 
@@ -18,7 +17,6 @@
     $end = file_get_contents("./template/bottom.html",true);
 
     $start = sprintf($start,$cate,$cate);
-    echo $start;
 
 
 
@@ -28,14 +26,14 @@
         $difficulty = $row['difficulty'];
         $points = $row['points'];
         $file = $row['file'];
-        // $cell = sprintf($cell,$name) 
+        $cell = sprintf($cell,$name,$description,$file,$difficulty,$points);
         $start = $start.$cell;
 
     }
     
-    //$html .= $end;
+    $start .= $end;
     //
-    //echo $html;
+    echo $html;
     // Return back
 
 ?>
