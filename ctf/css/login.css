@@ -1,0 +1,112 @@
+ .u-section-1 {
+  min-height: 750px;
+}
+
+.u-section-1 .u-image-1 {
+  width: 620px;
+  left: auto;
+  right: 0;
+  object-position: 0% 50%;
+}
+
+.u-section-1 .u-text-1 {
+  margin: 125px auto 0 calc(((100% - 1140px) / 2) + -25px);
+}
+
+.u-section-1 .u-form-1 {
+  height: 264px;
+  margin-top: 97px;
+  margin-bottom: 0;
+  margin-left: calc(((100% - 1140px) / 2) + -25px);
+  width: 570px;
+}
+
+.u-section-1 .u-text-2 {
+  margin: 0 auto 60px calc(((100% - 1140px) / 2) + -10px);
+}
+
+.u-section-1 .u-btn-2 {
+  background-image: none;
+  padding: 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-image-1 {
+    width: 485px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-left: calc(((100% - 940px) / 2) + -25px);
+  }
+
+  .u-section-1 .u-form-1 {
+    margin-left: calc(((100% - 940px) / 2) + -25px);
+    width: 495px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: calc(((100% - 940px) / 2) + -10px);
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-image-1 {
+    height: 750px;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    top: auto;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-left: calc(((100% - 720px) / 2) + -25px);
+  }
+
+  .u-section-1 .u-form-1 {
+    margin-left: calc(((100% - 720px) / 2) + -25px);
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: calc(((100% - 720px) / 2) + -10px);
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-image-1 {
+    height: 653px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-left: calc(((100% - 540px) / 2) + -25px);
+  }
+
+  .u-section-1 .u-form-1 {
+    margin-left: calc(((100% - 540px) / 2) + -25px);
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: calc(((100% - 540px) / 2) + -10px);
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-image-1 {
+    height: 411px;
+  }
+
+  .u-section-1 .u-text-1 {
+    width: auto;
+    margin-left: calc(((100% - 340px) / 2));
+  }
+
+  .u-section-1 .u-form-1 {
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .u-section-1 .u-text-2 {
+    width: auto;
+    margin-left: auto;
+  }
+}
