@@ -1,15 +1,14 @@
 <?php 
     
     require 'vendor/autoload.php';
-	$dotenv = Dotenv\Dotenv::createMutable(__DIR__, '.env');
-	$dotenv->load();
+    $dotenv = Dotenv\Dotenv::createMutable(__DIR__, '.env');
+    $dotenv->load();
 
     $conn = new mysqli($_ENV["db_host"], $_ENV["db_user"], $_ENV["db_passwd"],$_ENV["db_db"]);
 
-    $cate = real_escape_string($_GET["c"]);
-    $query = "SELECT * FROM `info` WHERE 'type' = '%s'";
+    $cate = mysqli_escape_string($conn,$_GET["c"]);
+    $query = "SELECT * FROM `info` WHERE type = '%s'";
     $query = sprintf($query,$cate);
-    
     $res = $conn->query($query) or die($conn->error);
 
     $start =  file_get_contents("./template/first.html",true); 
@@ -17,7 +16,7 @@
     $end = file_get_contents("./template/bottom.html",true);
 
     $start = sprintf($start,$cate,$cate);
-
+ 
 
 
     while ($row = $res->fetch_assoc()) {
@@ -25,15 +24,16 @@
         $description = $row['description'];
         $difficulty = $row['difficulty'];
         $points = $row['points'];
-        $file = $row['file'];
-        $cell = sprintf($cell,$name,$description,$file,$difficulty,$points);
-        $start = $start.$cell;
+	$file = $row['file'];
+	$temp = $cell;
+        $temp = sprintf($temp,$name,$description,$file,$difficulty,$points);
+	$start .= $temp;
 
     }
     
     $start .= $end;
     //
-    echo $html;
+    echo $start;
     // Return back
 
 ?>
