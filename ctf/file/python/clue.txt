@@ -1,0 +1,13 @@
+>>> flag = ""
+>>> 10+999                                                                 
+1009
+>>> flag += "flag{"
+>>> flag += str(_^23)
+>>> pow
+<built-in function pow>
+>>> flag += "_"  
+>>> flag += str(_(99,99,99))
+>>> flag += "_"
+>>> _ , _ ,a = ( 2+4 , 8+192912 , 1010)
+>>> flag += str(a^_)
+>>> flag += "}"

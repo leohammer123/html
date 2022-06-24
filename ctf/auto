@@ -1,0 +1,4 @@
+sudo git fetch
+sudo git add .
+sudo git commit -m 'commit by auto'
+sudo git push
